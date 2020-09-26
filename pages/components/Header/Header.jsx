@@ -4,8 +4,38 @@ import styled from "styled-components";
 import Search from "./components/Search";
 import Sidebar from "./components/Sidebar";
 import Backdrop from "../Backdrop/Backdrop";
+import Dropdown from "./components/Dropdown";
 import { PrimaryButton } from "../../../styles/button";
-import { NormalText } from "../../../styles/title";
+import { NormalText, NormalHoverText } from "../../../styles/title";
+
+const DROPITEMS = [
+  {
+    name: "Item 1",
+    link: "/",
+  },
+  {
+    name: "Item 1",
+    link: "/",
+  },
+  {
+    name: "Item 1",
+    link: "/",
+  },
+];
+const DROPITEMSSOCIAL = [
+  {
+    name: "Facebook",
+    link: "https://www.facebook.com",
+  },
+  {
+    name: "Instagram",
+    link: "https://www.instagram.com",
+  },
+  {
+    name: "Twitter",
+    link: "https://www.twitter.com",
+  },
+];
 
 export default function Header() {
   const [menu, setMenu] = useState(false);
@@ -30,50 +60,114 @@ export default function Header() {
   return (
     <HeaderContainer>
       <div onClick={openMenu} className="menuIcon">
-        <i class="fas fa-bars"></i>
+        <i className="fas fa-bars"></i>
         <NormalText>Menu</NormalText>
       </div>
 
       <ul className="menuItems">
         <li className="menuItem">
           <Link href="/" className="menuLink">
-            Features
+            <NormalHoverText>
+              Features
+              <i className="fas fa-caret-down"></i>
+            </NormalHoverText>
           </Link>
+
+          {/* Dropdown here */}
+          <DropdownContainer className="dropdown">
+            {DROPITEMSSOCIAL.map((item, i) => (
+              <li>
+                <Link href={item.link}>
+                  <NormalHoverText className="subItem">
+                    {item.name}
+                  </NormalHoverText>
+                </Link>
+              </li>
+            ))}
+          </DropdownContainer>
         </li>
 
         <li className="menuItem">
           <Link href="/" className="menuLink">
-            Earnings
+            <NormalHoverText>
+              Products
+              <i className="fas fa-caret-down"></i>
+            </NormalHoverText>
           </Link>
+
+          {/* Dropdown */}
+          <DropdownContainer className="dropdown">
+            {DROPITEMSSOCIAL.map((item, i) => (
+              <li>
+                <Link href={item.link}>
+                  <NormalHoverText className="subItem">
+                    {item.name}
+                  </NormalHoverText>
+                </Link>
+              </li>
+            ))}
+          </DropdownContainer>
         </li>
 
         <li className="menuItem">
           <Link href="/" className="menuLink">
-            How to
+            <NormalHoverText>
+              Projects
+              <i className="fas fa-caret-down"></i>
+            </NormalHoverText>
           </Link>
+
+          {/* Dropdown */}
+          <DropdownContainer className="dropdown">
+            {DROPITEMSSOCIAL.map((item, i) => (
+              <li>
+                <Link href={item.link}>
+                  <NormalHoverText className="subItem">
+                    {item.name}
+                  </NormalHoverText>
+                </Link>
+              </li>
+            ))}
+          </DropdownContainer>
         </li>
 
         <li className="menuItem">
           <Link href="/" className="menuLink">
-            Reviews
+            <NormalHoverText>
+              Technologies
+              <i className="fas fa-caret-down"></i>
+            </NormalHoverText>
           </Link>
+
+          {/* Dropdown */}
+          <DropdownContainer className="dropdown">
+            {DROPITEMS.map((item, i) => (
+              <li>
+                <Link href={item.link}>
+                  <NormalHoverText className="subItem">
+                    {item.name}
+                  </NormalHoverText>
+                </Link>
+              </li>
+            ))}
+          </DropdownContainer>
         </li>
 
         <li className="menuItem">
           <Link href="/" className="menuLink">
-            Art & beauty
+            <NormalHoverText>Art & Science</NormalHoverText>
           </Link>
         </li>
 
         <PrimaryButton>
-          <i class="fas fa-envelope"></i>
+          <i className="fas fa-envelope"></i>
           subscribe
         </PrimaryButton>
       </ul>
 
       <div onClick={openSearch} className="searchIcon">
         <NormalText>Search</NormalText>
-        <i class="fas fa-search"></i>
+        <i className="fas fa-search"></i>
       </div>
 
       {/* Hide components */}
@@ -111,5 +205,42 @@ const HeaderContainer = styled.div`
   .menuItems {
     display: flex;
     align-items: center;
+  }
+
+  .menuItem {
+    margin: 0 0.7rem;
+    position: relative;
+
+    &:hover {
+      .dropdown {
+        transform: scale(1) translateY(1rem);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+`;
+
+const DropdownContainer = styled.ul`
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 2px -3px 15px rgba(0, 0, 0, 0.1);
+  width: 12rem;
+  border-radius: 0.5rem;
+  padding: 1rem 0;
+  transition: all 0.3s ease;
+  transform: scale(0.8);
+  opacity: 0;
+  visibility: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  li {
+    margin-left: 1rem;
+  }
+
+  .subItem {
+    padding: 0.5rem 0;
   }
 `;
