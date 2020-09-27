@@ -60,3 +60,44 @@ export const PrimaryInput = styled.div`
     }
   }
 `;
+
+export const SecondaryInput = styled.div`
+  width: 100%;
+
+  input {
+    border: none;
+    outline: none;
+    font-weight: 400;
+    color: #999;
+    font-size: 1.2rem;
+    width: 85%;
+    margin: 0 auto;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+
+    &::placeholder {
+      color: #999;
+    }
+  }
+
+  button {
+    border: none;
+    outline: none;
+    background: transparent;
+
+    i {
+      font-size: 1.4rem;
+      color: #999;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: #555;
+      }
+    }
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+  }
+`;

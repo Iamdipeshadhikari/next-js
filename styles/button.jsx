@@ -19,3 +19,21 @@ export const PrimaryButton = styled.button`
     padding-right: 0.2rem;
   }
 `;
+
+export const SocialButton = styled.button`
+  margin-bottom: 1rem;
+  background-color: #999;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 10rem;
+  display: flex;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 1rem;
+  align-items: center;
+
+  i {
+    margin-right: 1rem;
+  }
+`;
