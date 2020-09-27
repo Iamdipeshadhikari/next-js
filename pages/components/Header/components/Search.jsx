@@ -1,14 +1,60 @@
+import React, { useState } from "react";
 import styled from "styled-components";
+import { PrimaryInput } from "../../../../styles/search";
+import { PrimaryButton } from "../../../../styles/button";
 
 export default function Search({ close }) {
+  const [search, setSearch] = useState("");
+
   return (
     <SearchContainer>
       <span onClick={close} className="close">
         <i class="fas fa-times"></i>
       </span>
       <div className="content">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti
-        aliquam suscipit nemo et voluptas quas fugit cumque in asperiores sequi!
+        <PrimaryInput>
+          <form>
+            <input
+              type="text"
+              name="search"
+              placeholder="Search and press Enter"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
+
+            <button type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+
+            {search !== "" && (
+              <i
+                onClick={() => setSearch("")}
+                class="fas fa-times inputClose"
+              ></i>
+            )}
+          </form>
+        </PrimaryInput>
+
+        <div className="category">
+          <PrimaryButton style={{ fontSize: "1rem" }}>
+            Animation (20)
+          </PrimaryButton>
+          <PrimaryButton
+            style={{ backgroundColor: "#aa96da", fontSize: "1rem" }}
+          >
+            Art & Design (5)
+          </PrimaryButton>
+          <PrimaryButton
+            style={{ backgroundColor: "#2b2e4a", fontSize: "1rem" }}
+          >
+            Tutorials (12)
+          </PrimaryButton>
+          <PrimaryButton
+            style={{ backgroundColor: "#e84545", fontSize: "1rem" }}
+          >
+            Algorithms (35)
+          </PrimaryButton>
+        </div>
       </div>
     </SearchContainer>
   );
@@ -19,7 +65,7 @@ const SearchContainer = styled.div`
   top: 0;
   left: 0;
   z-index: 1000;
-  background-color: rgba(255, 247, 243, 0.8);
+  background-color: rgba(255, 247, 243, 0.9);
   height: 100vh;
   width: 100vw;
   padding: 3rem 5rem 1rem 5rem;
@@ -49,5 +95,13 @@ const SearchContainer = styled.div`
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 45%;
+  }
+
+  .category {
+    padding: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 `;

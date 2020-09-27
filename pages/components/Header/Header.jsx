@@ -76,7 +76,7 @@ export default function Header() {
           {/* Dropdown here */}
           <DropdownContainer className="dropdown">
             {DROPITEMSSOCIAL.map((item, i) => (
-              <li>
+              <li key={i}>
                 <Link href={item.link}>
                   <NormalHoverText className="subItem">
                     {item.name}
@@ -98,7 +98,7 @@ export default function Header() {
           {/* Dropdown */}
           <DropdownContainer className="dropdown">
             {DROPITEMSSOCIAL.map((item, i) => (
-              <li>
+              <li key={i}>
                 <Link href={item.link}>
                   <NormalHoverText className="subItem">
                     {item.name}
@@ -120,7 +120,7 @@ export default function Header() {
           {/* Dropdown */}
           <DropdownContainer className="dropdown">
             {DROPITEMSSOCIAL.map((item, i) => (
-              <li>
+              <li key={i}>
                 <Link href={item.link}>
                   <NormalHoverText className="subItem">
                     {item.name}
@@ -142,7 +142,7 @@ export default function Header() {
           {/* Dropdown */}
           <DropdownContainer className="dropdown">
             {DROPITEMS.map((item, i) => (
-              <li>
+              <li key={i}>
                 <Link href={item.link}>
                   <NormalHoverText className="subItem">
                     {item.name}
