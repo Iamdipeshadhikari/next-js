@@ -4,6 +4,21 @@ import { NormalHoverText } from "../../../../styles/title";
 import { SecondaryInput } from "../../../../styles/search";
 import { SocialButton } from "../../../../styles/button";
 
+const DROPITEMSSOCIAL = [
+  {
+    name: "Facebook",
+    link: "https://www.facebook.com",
+  },
+  {
+    name: "Instagram",
+    link: "https://www.instagram.com",
+  },
+  {
+    name: "Twitter",
+    link: "https://www.twitter.com",
+  },
+];
+
 export default function Sidebar() {
   return (
     <SidebarContainer>
@@ -27,6 +42,18 @@ export default function Sidebar() {
               <NormalHoverText>Tutorials</NormalHoverText>
             </Link>
             <span className="dropIcon"></span>
+
+            <DropdownContainer className="dropdown">
+              {DROPITEMSSOCIAL.map((item, i) => (
+                <li key={i}>
+                  <Link href={item.link}>
+                    <NormalHoverText className="subItem">
+                      {item.name}
+                    </NormalHoverText>
+                  </Link>
+                </li>
+              ))}
+            </DropdownContainer>
           </li>
 
           <li className="menuItem">
@@ -40,6 +67,19 @@ export default function Sidebar() {
               <NormalHoverText>Courses</NormalHoverText>
             </Link>
             <span className="dropIcon"></span>
+
+            {/* Dropdown here */}
+            <DropdownContainer className="dropdown">
+              {DROPITEMSSOCIAL.map((item, i) => (
+                <li key={i}>
+                  <Link href={item.link}>
+                    <NormalHoverText className="subItem">
+                      {item.name}
+                    </NormalHoverText>
+                  </Link>
+                </li>
+              ))}
+            </DropdownContainer>
           </li>
 
           <li className="menuItem">
@@ -133,6 +173,7 @@ const SidebarContainer = styled.div`
   }
 
   .menuItem {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -164,6 +205,14 @@ const SidebarContainer = styled.div`
         font-size: 1.3rem;
         color: #999;
       }
+
+      &:hover {
+        .dropdown {
+          transform: scale(1);
+          opacity: 1;
+          visibility: visible;
+        }
+      }
     }
 
     p {
@@ -176,5 +225,34 @@ const SidebarContainer = styled.div`
     margin: 0 auto 2rem auto;
     display: flex;
     flex-direction: column;
+  }
+`;
+
+const DropdownContainer = styled.ul`
+  position: absolute;
+  background-color: #f8b195;
+  box-shadow: 2px -3px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 2;
+  padding-top: 1rem;
+
+  display: flex;
+  flex-direction: column;
+
+  .subItem {
+    padding-bottom: 1rem !important;
+    color: #fff;
+    transition: all 0.2s ease;
+    display: inline-block;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
   }
 `;

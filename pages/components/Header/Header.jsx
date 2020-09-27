@@ -4,7 +4,6 @@ import styled from "styled-components";
 import Search from "./components/Search";
 import Sidebar from "./components/Sidebar";
 import Backdrop from "../Backdrop/Backdrop";
-import Dropdown from "./components/Dropdown";
 import { PrimaryButton } from "../../../styles/button";
 import { NormalText, NormalHoverText } from "../../../styles/title";
 
