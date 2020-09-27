@@ -1,0 +1,23 @@
+/* Tablets */
+@media screen and (max-width: 1024px) {
+}
+
+/* Small Tablets */
+@media screen and (max-width: 800px) {
+}
+
+/* Normal */
+@media screen and (max-width: 768px) {
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+}
+
+/* Small Mobile */
+@media screen and (max-width: 411px) {
+}
+
+/* Last Phone */
+@media screen and (max-width: 360px) {
+}

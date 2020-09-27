@@ -1,6 +1,7 @@
 import Head from "next/head";
 import GlobalStyles from "../../../styles/global";
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 import theme from "../../theme";
 import { ThemeProvider } from "styled-components";
 
@@ -14,7 +15,7 @@ export default function Layout({ children, headTitle }) {
       <GlobalStyles />
       <Header />
       {children}
-      <h1>I am footer</h1>
+      <Footer />
     </ThemeProvider>
   );
 }

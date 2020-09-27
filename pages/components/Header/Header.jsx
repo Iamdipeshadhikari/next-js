@@ -175,7 +175,7 @@ export default function Header() {
       </div>
 
       {/* Hide components */}
-      {menu && <Sidebar />}
+      {menu && <Sidebar close={closeMenu} />}
       {menu && <Backdrop close={closeMenu} />}
       {search && <Search close={closeSearch} />}
     </HeaderContainer>

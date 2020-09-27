@@ -5,14 +5,7 @@ import { Paragraph } from "../styles/title";
 export default function Home() {
   return (
     <Layout headTitle="Home page">
-      <Paragraph>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit
-        blanditiis ipsa quibusdam unde deserunt debitis ipsum distinctio nisi,
-        soluta, cum recusandae sit nihil, ex voluptas maxime sunt dolores
-        nostrum alias quas iure facere maiores corrupti? Adipisci illum libero
-        sunt labore dignissimos? Eligendi nam eaque commodi, sapiente vel
-        laboriosam quis quos!
-      </Paragraph>
+      <Paragraph>Hi i am home</Paragraph>
       <Link href="/about-us">go to about</Link>
     </Layout>
   );

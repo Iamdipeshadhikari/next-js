@@ -19,10 +19,10 @@ const DROPITEMSSOCIAL = [
   },
 ];
 
-export default function Sidebar() {
+export default function Sidebar({ close }) {
   return (
     <SidebarContainer>
-      <span className="close">
+      <span onClick={close} className="close">
         <i class="fas fa-times"></i>
       </span>
       <div className="content">
