@@ -18,6 +18,24 @@ export const PrimaryButton = styled.button`
     font-size: 1rem;
     padding-right: 0.2rem;
   }
+
+  /* Mobile Phones 480 */
+  @media screen and (max-width: 480px) {
+    font-size: .9rem !important;
+    padding: 0.3rem 0.5rem;
+  }
+
+  /* Mobile Phones 375 */
+  @media screen and (max-width: 411px) {
+    font-size: .8rem !important;
+    padding: 0.3rem 0.5rem;
+  }
+
+   /* Mobile Phones 360 */
+   @media screen and (max-width: 360px) {
+    font-size: .6rem !important;
+    padding: 0.3rem 0.5rem;
+  }
 `;
 
 export const SocialButton = styled.button`

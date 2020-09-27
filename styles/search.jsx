@@ -59,6 +59,17 @@ export const PrimaryInput = styled.div`
       color: #333;
     }
   }
+
+  /* Mobile Phones */
+  @media screen and (max-width: 480px) {
+    input {
+      padding: 0.4rem;
+      font-size: 1rem;
+    }
+    .inputClose {
+      font-size: 1rem;
+    }
+  }
 `;
 
 export const SecondaryInput = styled.div`

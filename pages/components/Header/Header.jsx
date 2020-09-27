@@ -158,11 +158,16 @@ export default function Header() {
           </Link>
         </li>
 
-        <PrimaryButton>
+        <PrimaryButton className="desktopSubscribe">
           <i className="fas fa-envelope"></i>
           subscribe
         </PrimaryButton>
       </ul>
+
+      <PrimaryButton className="mobileSubscribe">
+        <i className="fas fa-envelope"></i>
+        subscribe
+      </PrimaryButton>
 
       <div onClick={openSearch} className="searchIcon">
         <NormalText>Search</NormalText>
@@ -189,6 +194,31 @@ const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  /* Tablets */
+  @media screen and (max-width: 1024px) {
+    padding: 0 2rem;
+  }
+
+  /* Small Tablets */
+  @media screen and (max-width: 800px) {
+    .desktopSubscribe {
+      display: none;
+    }
+  }
+
+  /* Mobiles */
+  @media screen and (max-width: 768px) {
+    padding: 0 3rem;
+
+    .menuItems {
+      display: none !important;
+    }
+
+    .mobileSubscribe {
+      display: inline-block !important;
+    }
+  }
 
   .menuIcon,
   .searchIcon {
@@ -217,6 +247,10 @@ const HeaderContainer = styled.div`
         visibility: visible;
       }
     }
+  }
+
+  .mobileSubscribe {
+    display: none;
   }
 `;
 

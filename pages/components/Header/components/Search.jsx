@@ -104,4 +104,41 @@ const SearchContainer = styled.div`
     align-items: center;
     justify-content: space-between;
   }
+
+  /* Tablets */
+  @media screen and (max-width: 1024px) {
+    .content {
+      top: 50%;
+      width: 55%;
+    }
+  }
+
+  /* Mobiles */
+  @media screen and (max-width: 768px) {
+    .content {
+      top: 50%;
+      width: 70%;
+    }
+  }
+
+  /* More Small Tablets */
+  @media screen and (max-width: 600px) {
+    padding: 2rem;
+    .content {
+      width: 90%;
+    }
+  }
+
+  /* Mobile Phones */
+  @media screen and (max-width: 480px) {
+    padding: 1rem;
+
+    .close {
+      height: 2rem;
+      width: 2rem;
+      i {
+        font-size: 1rem;
+      }
+    }
+  }
 `;

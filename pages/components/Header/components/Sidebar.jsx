@@ -30,7 +30,7 @@ export default function Sidebar() {
           <Link href="/">Junior</Link>
         </h1>
 
-        <ul className="menuItems">
+        <ul className="sideMenuItems">
           <li className="menuItem">
             <Link href="/">
               <NormalHoverText>Features</NormalHoverText>
@@ -165,7 +165,7 @@ const SidebarContainer = styled.div`
     letter-spacing: 1px;
   }
 
-  .menuItems {
+  .sideMenuItems {
     display: flex;
     flex-direction: column;
     width: 90%;
@@ -225,6 +225,40 @@ const SidebarContainer = styled.div`
     margin: 0 auto 2rem auto;
     display: flex;
     flex-direction: column;
+  }
+
+  /* Tablets */
+  @media screen and (max-width: 1024px) {
+    width: 35%;
+
+    .Logo {
+      font-size: 4.5rem;
+    }
+  }
+
+  /* Mobiles */
+  @media screen and (max-width: 768px) {
+    width: 50%;
+  }
+
+  /* More Small Tablets */
+  @media screen and (max-width: 600px) {
+    width: 55%;
+    padding: 2rem;
+  }
+
+  /* Mobile Phones */
+  @media screen and (max-width: 480px) {
+    width: 60%;
+    padding: 1rem;
+
+    .sideMenuItems {
+      width: 100%;
+    }
+
+    .social {
+      width: 100%;
+    }
   }
 `;
 
