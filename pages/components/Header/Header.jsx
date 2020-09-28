@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import Search from "./components/Search";
@@ -42,6 +42,20 @@ export default function Header() {
   const [menu, setMenu] = useState(false);
   const [search, setSearch] = useState(false);
   const [openModal, setOpenModal] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > 200) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  });
 
   const openMenu = () => {
     setMenu(true);
@@ -80,7 +94,7 @@ export default function Header() {
 
   return (
     <>
-      <HeaderContainer>
+      <HeaderContainer className={scrolled ? "scrolled" : null}>
         <div onClick={openMenu} className="menuIcon">
           <i className="fas fa-bars"></i>
           <NormalText>Menu</NormalText>
@@ -187,7 +201,7 @@ export default function Header() {
           </PrimaryButton>
         </ul>
 
-        <PrimaryButton className="mobileSubscribe">
+        <PrimaryButton onClick={handleOpenModal} className="mobileSubscribe">
           <i className="fas fa-envelope"></i>
           subscribe
         </PrimaryButton>

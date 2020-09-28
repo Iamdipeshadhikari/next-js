@@ -45,4 +45,11 @@ export default createGlobalStyle`
         }
 
     }
+
+    /* Sticky Navbar Logic */
+    .scrolled {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
 `;
