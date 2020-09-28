@@ -37,3 +37,41 @@ export const NormalHoverText = styled.p`
     color: #f8b195;
   }
 `;
+
+export const PrimaryColorHeading = styled.h1`
+  p {
+    color: #f8b195;
+    font-size: 2.5rem;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    display: inline;
+    background-repeat: no-repeat;
+    transition: all 500ms ease-in-out;
+
+    background-position: bottom left;
+    background-size: 0% 5px;
+    background-image: linear-gradient(
+      to right,
+      rgba(250, 112, 154, 0.5),
+      rgba(254, 225, 64, 0.5)
+    );
+    padding-bottom: 5px;
+  }
+
+  &:hover p {
+    background-size: 100% 5px;
+  }
+
+  /* &::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width 0.3s;
+  }
+
+  &:hover::after {
+    width: 100%;
+  } */
+`;

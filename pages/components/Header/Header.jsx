@@ -4,6 +4,8 @@ import styled from "styled-components";
 import Search from "./components/Search";
 import Sidebar from "./components/Sidebar";
 import Backdrop from "../Backdrop/Backdrop";
+import NewsletterModal from "./components/NewsletterModal";
+import Modal from "react-modal";
 import { PrimaryButton } from "../../../styles/button";
 import { NormalText, NormalHoverText } from "../../../styles/title";
 
@@ -39,6 +41,7 @@ const DROPITEMSSOCIAL = [
 export default function Header() {
   const [menu, setMenu] = useState(false);
   const [search, setSearch] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
   const openMenu = () => {
     setMenu(true);
@@ -56,129 +59,159 @@ export default function Header() {
     setSearch(false);
   };
 
+  const handleOpenModal = () => {
+    setOpenModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setOpenModal(false);
+  };
+
+  const customStyles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+    },
+  };
+
   return (
-    <HeaderContainer>
-      <div onClick={openMenu} className="menuIcon">
-        <i className="fas fa-bars"></i>
-        <NormalText>Menu</NormalText>
-      </div>
+    <>
+      <HeaderContainer>
+        <div onClick={openMenu} className="menuIcon">
+          <i className="fas fa-bars"></i>
+          <NormalText>Menu</NormalText>
+        </div>
 
-      <ul className="menuItems">
-        <li className="menuItem">
-          <Link href="/" className="menuLink">
-            <NormalHoverText>
-              Features
-              <i className="fas fa-caret-down"></i>
-            </NormalHoverText>
-          </Link>
+        <ul className="menuItems">
+          <li className="menuItem">
+            <Link href="/" className="menuLink">
+              <NormalHoverText>
+                Features
+                <i className="fas fa-caret-down"></i>
+              </NormalHoverText>
+            </Link>
 
-          {/* Dropdown here */}
-          <DropdownContainer className="dropdown">
-            {DROPITEMSSOCIAL.map((item, i) => (
-              <li key={i}>
-                <Link href={item.link}>
-                  <NormalHoverText className="subItem">
-                    {item.name}
-                  </NormalHoverText>
-                </Link>
-              </li>
-            ))}
-          </DropdownContainer>
-        </li>
+            {/* Dropdown here */}
+            <DropdownContainer className="dropdown">
+              {DROPITEMSSOCIAL.map((item, i) => (
+                <li key={i}>
+                  <Link href={item.link}>
+                    <NormalHoverText className="subItem">
+                      {item.name}
+                    </NormalHoverText>
+                  </Link>
+                </li>
+              ))}
+            </DropdownContainer>
+          </li>
 
-        <li className="menuItem">
-          <Link href="/" className="menuLink">
-            <NormalHoverText>
-              Products
-              <i className="fas fa-caret-down"></i>
-            </NormalHoverText>
-          </Link>
+          <li className="menuItem">
+            <Link href="/" className="menuLink">
+              <NormalHoverText>
+                Products
+                <i className="fas fa-caret-down"></i>
+              </NormalHoverText>
+            </Link>
 
-          {/* Dropdown */}
-          <DropdownContainer className="dropdown">
-            {DROPITEMSSOCIAL.map((item, i) => (
-              <li key={i}>
-                <Link href={item.link}>
-                  <NormalHoverText className="subItem">
-                    {item.name}
-                  </NormalHoverText>
-                </Link>
-              </li>
-            ))}
-          </DropdownContainer>
-        </li>
+            {/* Dropdown */}
+            <DropdownContainer className="dropdown">
+              {DROPITEMSSOCIAL.map((item, i) => (
+                <li key={i}>
+                  <Link href={item.link}>
+                    <NormalHoverText className="subItem">
+                      {item.name}
+                    </NormalHoverText>
+                  </Link>
+                </li>
+              ))}
+            </DropdownContainer>
+          </li>
 
-        <li className="menuItem">
-          <Link href="/" className="menuLink">
-            <NormalHoverText>
-              Projects
-              <i className="fas fa-caret-down"></i>
-            </NormalHoverText>
-          </Link>
+          <li className="menuItem">
+            <Link href="/" className="menuLink">
+              <NormalHoverText>
+                Projects
+                <i className="fas fa-caret-down"></i>
+              </NormalHoverText>
+            </Link>
 
-          {/* Dropdown */}
-          <DropdownContainer className="dropdown">
-            {DROPITEMSSOCIAL.map((item, i) => (
-              <li key={i}>
-                <Link href={item.link}>
-                  <NormalHoverText className="subItem">
-                    {item.name}
-                  </NormalHoverText>
-                </Link>
-              </li>
-            ))}
-          </DropdownContainer>
-        </li>
+            {/* Dropdown */}
+            <DropdownContainer className="dropdown">
+              {DROPITEMSSOCIAL.map((item, i) => (
+                <li key={i}>
+                  <Link href={item.link}>
+                    <NormalHoverText className="subItem">
+                      {item.name}
+                    </NormalHoverText>
+                  </Link>
+                </li>
+              ))}
+            </DropdownContainer>
+          </li>
 
-        <li className="menuItem">
-          <Link href="/" className="menuLink">
-            <NormalHoverText>
-              Technologies
-              <i className="fas fa-caret-down"></i>
-            </NormalHoverText>
-          </Link>
+          <li className="menuItem">
+            <Link href="/" className="menuLink">
+              <NormalHoverText>
+                Technologies
+                <i className="fas fa-caret-down"></i>
+              </NormalHoverText>
+            </Link>
 
-          {/* Dropdown */}
-          <DropdownContainer className="dropdown">
-            {DROPITEMS.map((item, i) => (
-              <li key={i}>
-                <Link href={item.link}>
-                  <NormalHoverText className="subItem">
-                    {item.name}
-                  </NormalHoverText>
-                </Link>
-              </li>
-            ))}
-          </DropdownContainer>
-        </li>
+            {/* Dropdown */}
+            <DropdownContainer className="dropdown">
+              {DROPITEMS.map((item, i) => (
+                <li key={i}>
+                  <Link href={item.link}>
+                    <NormalHoverText className="subItem">
+                      {item.name}
+                    </NormalHoverText>
+                  </Link>
+                </li>
+              ))}
+            </DropdownContainer>
+          </li>
 
-        <li className="menuItem">
-          <Link href="/" className="menuLink">
-            <NormalHoverText>Art & Science</NormalHoverText>
-          </Link>
-        </li>
+          <li className="menuItem">
+            <Link href="/" className="menuLink">
+              <NormalHoverText>Art & Science</NormalHoverText>
+            </Link>
+          </li>
 
-        <PrimaryButton className="desktopSubscribe">
+          <PrimaryButton onClick={handleOpenModal} className="desktopSubscribe">
+            <i className="fas fa-envelope"></i>
+            subscribe
+          </PrimaryButton>
+        </ul>
+
+        <PrimaryButton className="mobileSubscribe">
           <i className="fas fa-envelope"></i>
           subscribe
         </PrimaryButton>
-      </ul>
 
-      <PrimaryButton className="mobileSubscribe">
-        <i className="fas fa-envelope"></i>
-        subscribe
-      </PrimaryButton>
+        <div onClick={openSearch} className="searchIcon">
+          <NormalText>Search</NormalText>
+          <i className="fas fa-search"></i>
+        </div>
 
-      <div onClick={openSearch} className="searchIcon">
-        <NormalText>Search</NormalText>
-        <i className="fas fa-search"></i>
-      </div>
+        {/* Hide components */}
+        {menu && <Sidebar close={closeMenu} />}
+        {menu && <Backdrop close={closeMenu} />}
+        {search && <Search close={closeSearch} />}
+      </HeaderContainer>
 
-      {/* Hide components */}
-      {menu && <Sidebar close={closeMenu} />}
-      {menu && <Backdrop close={closeMenu} />}
-      {search && <Search close={closeSearch} />}
-    </HeaderContainer>
+      <Modal
+        isOpen={openModal}
+        onRequestClose={handleCloseModal}
+        contentLabel="Subscription Modal"
+        style={customStyles}
+      >
+        <NewsletterModal />
+      </Modal>
+    </>
   );
 }
 

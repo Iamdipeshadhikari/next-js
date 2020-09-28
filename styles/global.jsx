@@ -24,4 +24,25 @@ export default createGlobalStyle`
         text-decoration: none;
         list-style: none;
     }
+
+    /* Only For Modal */
+    .ReactModal__Content {
+        border: none !important;
+        background-color: #fff;
+        width: 40%;
+        -webkit-box-shadow: 0px -1px 7px 0px rgba(0,0,0,0.43);
+        -moz-box-shadow: 0px -1px 7px 0px rgba(0,0,0,0.43);
+        box-shadow: 0px -1px 7px 0px rgba(0,0,0,0.20);
+
+        /* Tablets */
+        @media screen and (max-width: 1024px) {
+            width: 50%;
+        }
+
+        /* Small Tablets */
+        @media screen and (max-width: 800px) {
+            width: 70%;
+        }
+
+    }
 `;
