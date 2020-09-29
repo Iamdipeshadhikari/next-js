@@ -8,9 +8,9 @@ function Arrow(props) {
 
   const Icon =
     props.type === "next" ? (
-      <i class="fas fa-arrow-right"></i>
+      <i className="fas fa-arrow-right"></i>
     ) : (
-      <i class="fas fa-arrow-left"></i>
+      <i className="fas fa-arrow-left"></i>
     );
 
   return (
@@ -56,17 +56,36 @@ const POSTDATA = [
 ];
 
 export default function Slider(props) {
+  const ResponsiveSlider = {
+    nextArrow: <Arrow type="next" />,
+    prevArrow: <Arrow type="prev" />,
+    dots: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <SliderContainer>
-      <SliderComponent
-        nextArrow={<Arrow type="next" />}
-        prevArrow={<Arrow type="prev" />}
-        dots={false}
-        slidesToScroll={1}
-        slidesToShow={3}
-        autoplay={true}
-        autoplaySpeed={3000}
-      >
+      <SliderComponent {...ResponsiveSlider}>
         {POSTDATA.map((item, i) => (
           <PostCard key={i} post={item} />
         ))}
@@ -80,7 +99,6 @@ const SliderContainer = styled.div`
 
   .slick-list {
     width: 90%;
-    height: 25rem;
     margin: 0 auto;
   }
 
@@ -94,6 +112,7 @@ const SliderContainer = styled.div`
     position: absolute;
     top: 50%;
     left: 1rem;
+    transform: translateX(-1.5rem);
   }
 `;
 const SliderArrow = styled.button`
@@ -107,6 +126,7 @@ const SliderArrow = styled.button`
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.2s ease;
+  z-index: 100;
 
   &:hover {
     background-color: #f67280;

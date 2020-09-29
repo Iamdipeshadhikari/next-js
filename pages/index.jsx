@@ -32,8 +32,9 @@ const HomeContainer = styled.div`
       color: #000;
     }
     .tag {
-      letter-spacing: 3px;
-      color: #888;
+      color: #999;
+      font-size: 1rem;
+      letter-spacing: .5px;
     }
   }
 `;
