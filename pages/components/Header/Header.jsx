@@ -234,7 +234,6 @@ const HeaderContainer = styled.div`
   height: 4rem;
   background-color: #fff;
   box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 3rem;
   padding: 0 5rem;
   position: relative;
 
