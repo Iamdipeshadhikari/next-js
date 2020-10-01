@@ -1,12 +1,5 @@
 import styled from "styled-components";
 
-export const Paragraph = styled.p`
-  color: #999;
-  font-size: 2rem;
-  font-weight: 300;
-  font-family: "Rubik", sans-serif;
-`;
-
 export const NormalText = styled.p`
   font-weight: 500;
   font-size: 1.1rem;
@@ -74,4 +67,31 @@ export const PrimaryColorHeading = styled.h1`
   &:hover::after {
     width: 100%;
   } */
+`;
+
+export const SecondaryHeading = styled.h2`
+  font-size: 1.8rem;
+  color: #0e0e0e;
+  letter-spacing: 0.5px;
+  font-weight: 900;
+  padding: 0.2rem 1rem;
+  border-left: 5px solid #f8b195;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-block;
+
+  &:hover {
+    background-color: #f8b195;
+    color: #fff;
+    border-radius: 3px;
+    box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.1);
+  }
+`;
+
+export const Paragraph = styled.p`
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(180, 180, 180, 0.849);
+  letter-spacing: 0.5px;
+  line-height: 1.4;
 `;

@@ -11,7 +11,7 @@ export default createGlobalStyle`
 
     body {
         font-family: 'Yanone Kaffeesatz', sans-serif;
-        background-color: #fff7f3;
+        background-color: #FFF7F3;
     }
 
     a {
@@ -45,11 +45,15 @@ export default createGlobalStyle`
         }
 
     }
+    .ReactModal__Overlay {
+        z-index: 1000;
+    }
 
     /* Sticky Navbar Logic */
     .scrolled {
         position: fixed !important;
         top: 0;
         left: 0;
+        z-index: 990;
     }
 `;

@@ -21,19 +21,19 @@ export const PrimaryButton = styled.button`
 
   /* Mobile Phones 480 */
   @media screen and (max-width: 480px) {
-    font-size: .9rem !important;
+    font-size: 0.9rem !important;
     padding: 0.3rem 0.5rem;
   }
 
   /* Mobile Phones 411 */
   @media screen and (max-width: 411px) {
-    font-size: .8rem !important;
+    font-size: 0.8rem !important;
     padding: 0.3rem 0.5rem;
   }
 
-   /* Mobile Phones 360 */
-   @media screen and (max-width: 360px) {
-    font-size: .6rem !important;
+  /* Mobile Phones 360 */
+  @media screen and (max-width: 360px) {
+    font-size: 0.6rem !important;
     padding: 0.3rem 0.5rem;
   }
 `;
@@ -53,5 +53,24 @@ export const SocialButton = styled.button`
 
   i {
     margin-right: 1rem;
+  }
+`;
+
+export const TagButton = styled.a`
+  padding-top: 3px;
+  padding-bottom: 2px;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  font-size: .8rem;
+  color: #fff;
+  background-color: #333;
+  font-weight: 400;
+  letter-spacing: 1px;
+  border-radius: 10rem;
+  border: 4px solid #fff;
+
+  i {
+    margin-right: 0.5rem;
+    font-size: .8rem;
   }
 `;

@@ -12,6 +12,9 @@
 
 /* Mobile */
 @media screen and (max-width: 480px) {
+    .test {
+        color: rgba(180, 180, 180, 0.849);
+    }
 }
 
 /* Small Mobile */

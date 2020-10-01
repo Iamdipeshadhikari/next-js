@@ -28,6 +28,7 @@ const POSTDATA = [
     authorDate: "5 months ago",
     authorName: "Will smith",
     authorImage: "Images/post1.jpg",
+    tag: "Fashion"
   },
   {
     title: "To unreserved projection no introduced invitation",
@@ -36,6 +37,7 @@ const POSTDATA = [
     authorDate: "5 months ago",
     authorName: "Will smith",
     authorImage: "Images/post1.jpg",
+    tag: "Review"
   },
   {
     title: "To unreserved projection no introduced invitation",
@@ -44,6 +46,7 @@ const POSTDATA = [
     authorDate: "5 months ago",
     authorName: "Will smith",
     authorImage: "Images/post1.jpg",
+    tag: "Programming"
   },
   {
     title: "To unreserved projection no introduced invitation",
@@ -52,6 +55,7 @@ const POSTDATA = [
     authorDate: "5 months ago",
     authorName: "Will smith",
     authorImage: "Images/post1.jpg",
+    tag: "Coding"
   },
 ];
 
@@ -98,7 +102,7 @@ const SliderContainer = styled.div`
   width: 100%;
 
   .slick-list {
-    width: 90%;
+    width: 85%;
     margin: 0 auto;
   }
 
@@ -112,7 +116,6 @@ const SliderContainer = styled.div`
     position: absolute;
     top: 50%;
     left: 1rem;
-    transform: translateX(-1.5rem);
   }
 `;
 const SliderArrow = styled.button`
@@ -126,11 +129,16 @@ const SliderArrow = styled.button`
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.2s ease;
-  z-index: 100;
+  z-index: 1;
 
   &:hover {
     background-color: #f67280;
     box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.1);
     transform: scale(1.1);
+  }
+
+  /* Mobile */
+  @media screen and (max-width: 600px) {
+    display: none !important;
   }
 `;
