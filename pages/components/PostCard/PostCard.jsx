@@ -34,7 +34,7 @@ export default function PostCard({
       </div>
 
       <PrimaryButton className="postDate">
-        <i class="fas fa-stopwatch"></i>
+        <i className="fas fa-stopwatch"></i>
         {postDate}
       </PrimaryButton>
 

@@ -28,7 +28,7 @@ const POSTDATA = [
     authorDate: "5 months ago",
     authorName: "Will smith",
     authorImage: "Images/post1.jpg",
-    tag: "Fashion"
+    tag: "Fashion",
   },
   {
     title: "To unreserved projection no introduced invitation",
@@ -37,7 +37,7 @@ const POSTDATA = [
     authorDate: "5 months ago",
     authorName: "Will smith",
     authorImage: "Images/post1.jpg",
-    tag: "Review"
+    tag: "Review",
   },
   {
     title: "To unreserved projection no introduced invitation",
@@ -46,7 +46,7 @@ const POSTDATA = [
     authorDate: "5 months ago",
     authorName: "Will smith",
     authorImage: "Images/post1.jpg",
-    tag: "Programming"
+    tag: "Programming",
   },
   {
     title: "To unreserved projection no introduced invitation",
@@ -55,7 +55,7 @@ const POSTDATA = [
     authorDate: "5 months ago",
     authorName: "Will smith",
     authorImage: "Images/post1.jpg",
-    tag: "Coding"
+    tag: "Coding",
   },
 ];
 

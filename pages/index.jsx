@@ -2,6 +2,7 @@ import Layout from "./components/Layout/Layout";
 import styled from "styled-components";
 import Slider from "./components/Slider/Slider";
 import PopularPosts from "./components/PopularPosts/PopularPosts";
+import RecentPosts from "./components/RecentPosts/RecentPosts";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         </div>
         <Slider />
         <PopularPosts />
+        <RecentPosts />
       </HomeContainer>
     </Layout>
   );
@@ -32,7 +34,7 @@ const HomeContainer = styled.div`
       font-weight: 900;
       color: #000;
       letter-spacing: -3px;
-      line-height: .8;
+      line-height: 0.8;
     }
     .tag {
       color: #999;

@@ -46,7 +46,6 @@ export default function PostCardSecond(props) {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium,
         molestiae beatae, sapiente eveniet facilis asperiores eligendi voluptate
         velit deserunt iste assumenda nulla sequi harum, fugiat necessitatibus
-        qui. Et, minima animi!
       </Paragraph>
 
       <div className="footer">
@@ -66,6 +65,7 @@ const PostCardSecondContainer = styled.div`
   background-color: #fff;
   padding: 1rem;
   border-radius: 0.5rem;
+  margin-bottom: 1rem;
 
   .imageContainer {
     position: relative;
@@ -78,12 +78,11 @@ const PostCardSecondContainer = styled.div`
     background-size: cover;
     background-position: center;
     object-fit: center;
-    height: 18rem;
+    height: 15rem;
   }
 
   .heading {
-    margin-bottom: 0.5rem;
-
+    margin-bottom: 1rem !important;
     p {
       font-size: 1.8rem;
       text-transform: capitalize;
@@ -98,7 +97,7 @@ const PostCardSecondContainer = styled.div`
 
   .postDate {
     position: absolute;
-    right: 3rem;
+    right: 1.5rem;
     bottom: 0.5rem;
     font-size: 1rem;
     padding: 3px 0.7rem;
@@ -136,7 +135,7 @@ const PostCardSecondContainer = styled.div`
 
   .postTag {
     position: absolute;
-    left: 3rem;
+    left: 1.5rem;
     bottom: 0.5rem;
     cursor: pointer;
     transition: all 0.2s ease;
