@@ -59,9 +59,9 @@ export const SocialButton = styled.button`
 export const TagButton = styled.a`
   padding-top: 3px;
   padding-bottom: 2px;
-  padding-left: .5rem;
-  padding-right: .5rem;
-  font-size: .8rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 0.8rem;
   color: #fff;
   background-color: #333;
   font-weight: 400;
@@ -71,6 +71,22 @@ export const TagButton = styled.a`
 
   i {
     margin-right: 0.5rem;
-    font-size: .8rem;
+    font-size: 0.8rem;
+  }
+`;
+
+export const ThirdButton = styled.a`
+  padding: 0.3rem 1.5rem;
+  line-height: 1.9;
+  border-radius: 4px;
+  color: #999;
+  font-size: 1.2rem;
+  border: 3px solid rgba(153, 153, 153, 1);
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: #f8b195;
+    border: 3px solid #f8b195;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   }
 `;

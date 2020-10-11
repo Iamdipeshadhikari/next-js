@@ -3,6 +3,10 @@ import styled from "styled-components";
 import Slider from "./components/Slider/Slider";
 import PopularPosts from "./components/PopularPosts/PopularPosts";
 import RecentPosts from "./components/RecentPosts/RecentPosts";
+import ExplorePosts from "./components/ExplorePosts/ExplorePosts";
+import SidebarBox from "./components/SidebarBox/SidebarBox";
+import Advertisement from "./components/Advertisement/Advertisement";
+import { Container } from "react-grid-system";
 
 export default function Home() {
   return (
@@ -14,7 +18,14 @@ export default function Home() {
         </div>
         <Slider />
         <PopularPosts />
+        <Container>
+          <Advertisement style={{ height: "7rem", marginBottom: "3rem" }} />
+        </Container>
         <RecentPosts />
+        <Container>
+          <Advertisement style={{ height: "7rem", marginBottom: "3rem" }} />
+        </Container>
+        <ExplorePosts />
       </HomeContainer>
     </Layout>
   );

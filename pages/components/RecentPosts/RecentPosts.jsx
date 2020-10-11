@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Container, Col, Row } from "react-grid-system";
 import { SecondaryHeading } from "../../../styles/title";
 import PostCardThree from "../PostCardThree/PostCardThree";
+import Newsletter from "../Newsletter/Newsletter";
 
 export default function RecentPosts() {
   return (
@@ -31,12 +32,7 @@ export default function RecentPosts() {
             </Row>
           </Col>
           <Col sm={12} md={3}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-            aspernatur minima pariatur earum ipsum minus fugit voluptatibus,
-            quos explicabo necessitatibus qui. Nulla, tempore error incidunt
-            sapiente facilis repudiandae explicabo quod repellat amet quae.
-            Consectetur cumque sit aliquam nobis delectus ipsa accusantium,
-            vitae ea error. Quod ad consectetur inventore voluptates id.
+            <Newsletter />
           </Col>
         </Row>
       </Container>
@@ -45,7 +41,7 @@ export default function RecentPosts() {
 }
 
 const RecentPostsContainer = styled.div`
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
   .heading {
     margin-bottom: 3rem;
   }

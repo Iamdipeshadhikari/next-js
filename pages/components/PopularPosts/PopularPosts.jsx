@@ -32,7 +32,7 @@ export default function PopularPosts(props) {
 }
 
 const PopularPostsContainer = styled.div`
-  padding: 5rem 0;
+  padding: 3rem 0;
   width: 85%;
   margin: 0 auto;
 

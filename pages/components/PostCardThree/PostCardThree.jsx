@@ -6,7 +6,7 @@ export default function PostCardThree() {
   return (
     <PostCardThreeContainer>
       <img
-        src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2019/11/14/15737172127732.jpg"
+        src="https://s3.r29static.com/bin/entry/9e6/720x864,85/2172764/image.webp"
         alt="Post Title"
       />
 
@@ -28,7 +28,7 @@ export default function PostCardThree() {
 
         <div className="authorInfo">
           <img
-            src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2019/11/14/15737172127732.jpg"
+            src="https://s3.r29static.com/bin/entry/9e6/720x864,85/2172764/image.webp"
             alt="Author Name"
           />
           <NormalHoverText className="authorName">Mia Khalifa</NormalHoverText>

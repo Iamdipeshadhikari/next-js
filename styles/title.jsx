@@ -95,3 +95,17 @@ export const Paragraph = styled.p`
   letter-spacing: 0.5px;
   line-height: 1.4;
 `;
+
+export const ThirdHeading = styled.h3`
+  font-size: 2.5rem;
+  color: #999;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  padding: 0 1.5rem;
+  transition: all 0.2s ease;
+  font-weight: 500;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+`;

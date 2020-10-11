@@ -20,7 +20,7 @@ export default function PostCardSecond(props) {
       <div className="imageContainer">
         <img className="thumbnail" src="/Images/post1.jpg" alt="title" />
         <PrimaryButton className="postDate">
-          <i class="fas fa-stopwatch"></i>
+          <i className="fas fa-stopwatch"></i>
           2hrs
         </PrimaryButton>
 
@@ -52,7 +52,7 @@ export default function PostCardSecond(props) {
         <NormalHoverText className="continue">Continue Reading</NormalHoverText>
 
         <div className="comment">
-          <i class="far fa-comments"></i>
+          <i className="far fa-comments"></i>
           <NormalHoverText>5</NormalHoverText>
         </div>
       </div>
@@ -65,6 +65,7 @@ const PostCardSecondContainer = styled.div`
   background-color: #fff;
   padding: 1rem;
   border-radius: 0.5rem;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 1rem;
 
   .imageContainer {
