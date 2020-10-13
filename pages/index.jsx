@@ -4,8 +4,8 @@ import Slider from "./components/Slider/Slider";
 import PopularPosts from "./components/PopularPosts/PopularPosts";
 import RecentPosts from "./components/RecentPosts/RecentPosts";
 import ExplorePosts from "./components/ExplorePosts/ExplorePosts";
-import SidebarBox from "./components/SidebarBox/SidebarBox";
 import Advertisement from "./components/Advertisement/Advertisement";
+import BottomBlogs from "./components/BottomBlogs/BottomBlogs";
 import { Container } from "react-grid-system";
 
 export default function Home() {
@@ -26,13 +26,18 @@ export default function Home() {
           <Advertisement style={{ height: "7rem", marginBottom: "3rem" }} />
         </Container>
         <ExplorePosts />
+        <Container>
+          <Advertisement
+            style={{ height: "7rem", marginBottom: "3rem", marginTop: "3rem" }}
+          />
+        </Container>
+        <BottomBlogs />
       </HomeContainer>
     </Layout>
   );
 }
 
 const HomeContainer = styled.div`
-  padding: 0 1rem;
 
   .logoContainer {
     width: 100%;

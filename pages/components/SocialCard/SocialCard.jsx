@@ -4,19 +4,19 @@ export default function SocialCard(props) {
   return (
     <SocialCardContainer>
       <li className="facebook">
-        <i class="fab fa-facebook-f"></i>
+        <i className="fab fa-facebook-f"></i>
       </li>
 
       <li className="instagram">
-        <i class="fab fa-instagram"></i>
+        <i className="fab fa-instagram"></i>
       </li>
 
       <li className="twitter">
-        <i class="fab fa-twitter"></i>
+        <i className="fab fa-twitter"></i>
       </li>
 
       <li className="email">
-        <i class="far fa-envelope"></i>
+        <i className="far fa-envelope"></i>
       </li>
     </SocialCardContainer>
   );
@@ -51,10 +51,10 @@ const SocialCardContainer = styled.div`
     color: #fff;
     cursor: pointer;
     transition: all 0.2s ease;
-    box-shadow: 2px 2px 7px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.2);
 
     i {
-        font-size: 1.2rem;
+      font-size: 1.2rem;
     }
   }
 `;

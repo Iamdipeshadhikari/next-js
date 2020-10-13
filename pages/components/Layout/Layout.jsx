@@ -4,6 +4,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import theme from "../../theme";
 import { ThemeProvider } from "styled-components";
+import ScrollToTop from "../ScrollToTop/ScrollToTop";
 
 export default function Layout({ children, headTitle }) {
   return (
@@ -16,6 +17,7 @@ export default function Layout({ children, headTitle }) {
       <Header />
       {children}
       <Footer />
+      <ScrollToTop />
     </ThemeProvider>
   );
 }
