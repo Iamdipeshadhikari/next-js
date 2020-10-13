@@ -33,7 +33,7 @@ const FooterContainer = styled.div`
   background-color: #fff;
   padding: 1.5rem 5rem;
   box-shadow: 10px -3px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 3rem;
+  margin-top: 5rem;
 
   display: flex;
   align-items: center;

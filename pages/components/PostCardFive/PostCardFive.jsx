@@ -56,6 +56,9 @@ const PostCardFiveContainer = styled.div`
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
   }
 
   .info {
@@ -90,7 +93,7 @@ const PostCardFiveContainer = styled.div`
         i {
           font-size: 1rem;
           padding-right: 5px;
-          color: #ff2e63;
+          color: #f8b195;
         }
       }
     }

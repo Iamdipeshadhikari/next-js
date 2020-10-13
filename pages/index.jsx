@@ -6,6 +6,8 @@ import RecentPosts from "./components/RecentPosts/RecentPosts";
 import ExplorePosts from "./components/ExplorePosts/ExplorePosts";
 import Advertisement from "./components/Advertisement/Advertisement";
 import BottomBlogs from "./components/BottomBlogs/BottomBlogs";
+import TopWriters from "./components/TopWriters/TopWriters";
+import Instagram from "./components/Instagram/Instagram";
 import { Container } from "react-grid-system";
 
 export default function Home() {
@@ -32,13 +34,16 @@ export default function Home() {
           />
         </Container>
         <BottomBlogs />
+        <Container>
+          <TopWriters />
+        </Container>
+        <Instagram />
       </HomeContainer>
     </Layout>
   );
 }
 
 const HomeContainer = styled.div`
-
   .logoContainer {
     width: 100%;
     text-align: center;

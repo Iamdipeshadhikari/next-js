@@ -8,28 +8,28 @@ const Categories = () => {
     <CategoriesContainer>
       <SidebarBox>
         <PrimaryColorHeading className="sidebarCategory">
-          <i class="fas fa-th-large" />
+          <i className="fas fa-th-large" />
           <p>Explore Categories</p>
         </PrimaryColorHeading>
 
         <CategoriesItems>
           <li>
-            <i class="fas fa-chevron-right" />
+            <i className="fas fa-chevron-right" />
             <span>Personal (12)</span>
           </li>
 
           <li>
-            <i class="fas fa-chevron-right" />
+            <i className="fas fa-chevron-right" />
             <span>Coding</span>
           </li>
 
           <li>
-            <i class="fas fa-chevron-right" />
+            <i className="fas fa-chevron-right" />
             <span>Reviews (5)</span>
           </li>
 
           <li>
-            <i class="fas fa-chevron-right" />
+            <i className="fas fa-chevron-right" />
             <span>Tech & Gadgets</span>
           </li>
 
